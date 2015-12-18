@@ -38,7 +38,14 @@ app.get('/messages', function (req, res) {
 app.post('/', function (req, res) {
   var reqMessage = req.body.messPost;
   var idNumber = req.cookies.cookieName;
-  messages.push({ID: idNumber, Message:reqMessage});
+  var currentdate = new Date();
+  var datetime = currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/"
+                + currentdate.getFullYear() + " @ "
+                + currentdate.getHours() + ":"
+                + currentdate.getMinutes() + ":"
+                + currentdate.getSeconds();
+  messages.unshift({ID: idNumber, Message:reqMessage, Time: datetime});
   res.sendFile(path.join(__dirname + '/public/index.html'));
 });
 

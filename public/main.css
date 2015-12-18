@@ -1,0 +1,14 @@
+body {
+  text-align:center;
+  background-color: #232B2B;
+}
+
+h1, a, p {
+  color: #DC3D24;
+}
+
+.post {
+  background: #232B2B;
+  border-radius: 10px;
+  border: 1px solid #DC3D24;
+}
