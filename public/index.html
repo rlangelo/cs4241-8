@@ -10,12 +10,14 @@
       Post Anonymously
     </div>
     <div>
-      <textarea rows="4" columns="50" maxlength="50" style="resize:none" id="textMess">
-      </textarea>
-      <br>
-      <input type="button" value="Post" id="postMess"/>
-      <br>
-      <br>
+      <form action="/" method="post">
+        <a>Message:</a>
+        <input type="text" name="messPost"/>
+        <br>
+        <button type="submit">Submit</button>
+        <br>
+        <br>
+      </form>
     </div>
       <div id="posts">
       </div>

@@ -1,23 +1,4 @@
-document.getElementById("postMess").addEventListener("click", PostMessage);
-document.getElementById("textMess").value = "";
 messages();
-
-function PostMessage() {
-    var text = document.getElementById("textMess").value;
-    console.log(text);
-    if (text == "") {
-      alert("Your message must at least 1 character");
-    }
-    else{
-    var reqp = new XMLHttpRequest();
-    console.log("here");
-    reqp.open('POST', '/post');
-    reqp.addEventListener("load", handleRes);
-
-    reqp.send();
-    return false;
-  }
-}
 
 function messages() {
     var reqp = new XMLHttpRequest();
